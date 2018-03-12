@@ -1,0 +1,14 @@
+<div style="text-align:center">
+  <h1 class="title">
+    {{ title }}
+  </h1>
+</div>
+<div [@listAnimation]="items.length" class="centerPosition itemList" >
+  <div *ngFor="let item of items; trackBy: trackByFn">
+    <div class="card tooltip" [ngClass]="setClasses(item.id)">
+      <div class="centerPosition card__label">{{item.name}} got {{item.counter}} votes</div>
+      <div class="clickCounter" (click)="increaseCounter(item.id);">{{item.counter}}</div>
+      <span class="tooltip__tooltipText">Click to upvote</span>
+    </div>
+  </div>
+</div>

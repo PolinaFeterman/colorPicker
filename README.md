@@ -1,0 +1,1 @@
+Click on button to upvote a color. Color cards will be sorted by the times they were clicked on.
